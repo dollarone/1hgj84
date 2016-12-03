@@ -10,6 +10,9 @@ PlatformerGame.Logo.prototype = {
   },
   create: function() {
 
+    this.dollar = this.game.add.audio('dollarone');
+    this.dollar.play();
+
     //Change the background colour
     this.game.stage.backgroundColor = this.colour;
 

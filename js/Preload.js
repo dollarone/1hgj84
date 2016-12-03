@@ -19,6 +19,7 @@ PlatformerGame.Preload.prototype = {
     this.game.load.image('gamejam', 'assets/images/onehourgamejamlogo.png');
 
     this.game.load.audio('splash', 'assets/audio/onehourgamejamsplash.ogg');
+    this.game.load.audio('dollarone', 'assets/audio/dollarone.ogg');
     this.game.load.audio('music', 'assets/audio/music.ogg');
 
   },

@@ -74,8 +74,8 @@ PlatformerGame.Game.prototype = {
 
         this.music = this.game.add.audio('music');
         this.music.loop = true;
-        this.music.volume = 0.3;
-        //this.music.play();
+        this.music.volume = 0.7;
+        this.music.play();
 
         //  The score
         //this.scoreText.fixedToCamera = true;
@@ -166,7 +166,7 @@ PlatformerGame.Game.prototype = {
     win: function(player, heart) {
         if (!this.winGame) {
             this.winGame = true;
-            this.winText = this.game.add.text(10, 150, 'You found the heart of queens!\n                   You win!', { fontSize: '32px', fill: '#000' });
+            this.winText = this.game.add.text(this.player.x - 380, 150, 'You found the Heart of Queens!\n                   You win!', { fontSize: '32px', fill: '#000' });
             this.player.body.velocity.x = 0;
             this.player.body.velocity.y = 0;
             heart.kill();
