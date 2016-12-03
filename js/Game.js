@@ -78,10 +78,8 @@ PlatformerGame.Game.prototype = {
         //this.music.play();
 
         //  The score
-        this.winText = this.game.add.text(10, 150, 'You found the heart of queens!\n                   You win!', { fontSize: '32px', fill: '#000' });
         //this.scoreText.fixedToCamera = true;
         
-        this.winText.visible = false;
 
         //  Our controls.
         this.cursors = this.game.input.keyboard.createCursorKeys();
@@ -168,10 +166,10 @@ PlatformerGame.Game.prototype = {
     win: function(player, heart) {
         if (!this.winGame) {
             this.winGame = true;
-            this.winText.visible = true;
+            this.winText = this.game.add.text(10, 150, 'You found the heart of queens!\n                   You win!', { fontSize: '32px', fill: '#000' });
             this.player.body.velocity.x = 0;
             this.player.body.velocity.y = 0;
-            heart.destroy();
+            heart.kill();
         }
     },
 
